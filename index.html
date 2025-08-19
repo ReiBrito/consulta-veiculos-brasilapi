@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Consulta FIPE - Preço Médio de Veículos</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1><i class="fas fa-car"></i> Consulta FIPE - Preço Médio de Veículos</h1>
+      <p>Selecione o tipo, a marca e o modelo para consultar o preço médio FIPE.</p>
+    </header>
+
+    <section class="search-section">
+      <div class="input-group">
+        <select id="tipoVeiculo" class="select-input">
+          <option value="">Selecione o tipo de veículo</option>
+          <option value="carros">Carros</option>
+          <option value="motos">Motos</option>
+          <option value="caminhoes">Caminhões</option>
+        </select>
+
+        <select id="marca" class="select-input" disabled>
+          <option value="">Selecione a marca</option>
+        </select>
+
+        <select id="modelo" class="select-input" disabled>
+          <option value="">Selecione o modelo</option>
+        </select>
+
+        <button id="btnConsultar" class="search-btn" disabled>
+          <i class="fas fa-search"></i> Consultar
+        </button>
+      </div>
+    </section>
+
+    <div id="loading" class="loading" style="display:none;">
+      <i class="fas fa-spinner"></i>
+      <p>Carregando...</p>
+    </div>
+
+    <div id="error" class="error" style="display:none;"></div>
+
+    <section id="resultsSection" class="results-section" style="display:none;">
+      <div class="vehicle-card">
+        <div class="vehicle-header">
+          <h2 id="vehicleName">Detalhes do Veículo</h2>
+        </div>
+        <div class="vehicle-details">
+          <div class="detail-card">
+            <h3><i class="fas fa-industry"></i> Marca</h3>
+            <p id="marcaP">-</p>
+          </div>
+          <div class="detail-card">
+            <h3><i class="fas fa-car-side"></i> Modelo</h3>
+            <p id="modeloP">-</p>
+          </div>
+          <div class="detail-card">
+            <h3><i class="fas fa-calendar-alt"></i> Ano</h3>
+            <p id="anoModeloP">-</p>
+          </div>
+          <div class="detail-card">
+            <h3><i class="fas fa-gas-pump"></i> Combustível</h3>
+            <p id="combustivelP">-</p>
+          </div>
+          <div class="detail-card">
+            <h3><i class="fas fa-dollar-sign"></i> Valor FIPE</h3>
+            <p id="valorFipeP">-</p>
+          </div>
+          <div class="detail-card">
+            <h3><i class="fas fa-calendar"></i> Mês de Referência</h3>
+            <p id="mesReferenciaP">-</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="js/consulta.js"></script>
+</body>
+</html>

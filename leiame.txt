@@ -1,0 +1,110 @@
+Aqui estão as instruções e os arquivos necessários para hospedar seu projeto no **GitHub Pages** de forma simples, sem precisar de servidor backend.
+
+---
+
+## ✅ 1. **Estrutura Final Recomendada**
+
+```
+consulta-veiculo/
+├── css/
+│   └── style.css
+├── js/
+│   └── consulta.js
+├── index.html
+└── package.json   (opcional para automação de deploy)
+```
+
+---
+
+## ✅ 2. **Arquivo `package.json` básico (opcional)**
+
+Você pode criar este arquivo se quiser automatizar o deploy com `npm run deploy`.
+Salve como `package.json` na raiz do projeto:
+
+```json
+{
+  "name": "consulta-veiculo-brasilapi",
+  "version": "1.0.0",
+  "description": "Sistema web para consultar veículos pela placa usando BrasilAPI",
+  "author": "Seu Nome",
+  "private": true,
+  "scripts": {
+    "start": "live-server --port=3000",
+    "deploy": "gh-pages -d ./"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.0.0",
+    "live-server": "^1.2.2"
+  }
+}
+```
+
+---
+
+## ✅ 3. **Configuração do Deploy Manual no GitHub Pages**
+
+### Passo 1: Suba o projeto no GitHub
+
+Crie um repositório e envie seus arquivos normalmente:
+
+```bash
+git init
+git add .
+git commit -m "Primeiro commit"
+git branch -M main
+git remote add origin https://github.com/SEU-USUARIO/NOME-REPO.git
+git push -u origin main
+```
+
+### Passo 2: Habilite o GitHub Pages
+
+1. Vá em **Settings > Pages**
+2. Em **Branch**, selecione `main` e a pasta `/ (root)`
+3. Clique em **Save**
+4. Aguarde alguns minutos e seu site estará disponível no link:
+
+   ```
+   https://SEU-USUARIO.github.io/NOME-REPO
+   ```
+
+---
+
+## ✅ 4. **Deploy Automático (opcional, usando gh-pages)**
+
+Se preferir automatizar:
+
+```bash
+npm init -y
+npm install gh-pages live-server --save-dev
+```
+
+Edite seu `package.json` com os scripts como te mostrei e execute:
+
+```bash
+# Deploy para GitHub Pages
+npm run deploy
+```
+
+No seu repositório, o conteúdo estará automaticamente publicado na branch `gh-pages`, e visível no link:
+
+```
+https://SEU-USUARIO.github.io/NOME-REPO/
+```
+
+---
+
+## ✅ 5. **Executar localmente com Live Server**
+
+```bash
+npm run start
+```
+
+Acesse em: `http://localhost:3000`
+
+---
+
+## 🎯 **Pronto!**
+
+Seu projeto já pode ser acessado pela web sem precisar de backend.
+
+---

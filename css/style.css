@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+header {
+    background: linear-gradient(to right, #2c3e50, #4a6491);
+    color: white;
+    padding: 25px 30px;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.api-info {
+    background: #3498db;
+    color: white;
+    padding: 10px;
+    font-size: 0.9rem;
+    text-align: center;
+    border-bottom: 1px solid #2980b9;
+}
+
+.search-section {
+    padding: 30px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.input-group {
+    display: flex;
+    max-width: 900px;
+    margin: 0 auto;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.select-input {
+    flex: 1;
+    min-width: 180px;
+    padding: 15px 20px;
+    font-size: 1.1rem;
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+.select-input:focus {
+    outline: none;
+    border-color: #2980b9;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3);
+}
+
+.search-btn {
+    background: linear-gradient(to right, #3498db, #2980b9);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-btn:hover:enabled {
+    background: linear-gradient(to right, #2980b9, #2573a7);
+    transform: translateY(-2px);
+}
+
+.search-btn:active:enabled {
+    transform: translateY(0);
+}
+
+.search-btn:disabled {
+    cursor: not-allowed;
+    background: #7fb8e0;
+    color: #d5e3f0;
+}
+
+.loading {
+    text-align: center;
+    padding: 30px;
+    display: none;
+}
+
+.loading i {
+    font-size: 2.5rem;
+    color: #3498db;
+    margin-bottom: 15px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.error {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 30px;
+    display: none;
+    max-width: 900px;
+    text-align: center;
+}
+
+.results-section {
+    display: none;
+    padding: 30px;
+}
+
+.vehicle-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.vehicle-header {
+    background: linear-gradient(to right, #27ae60, #2ecc71);
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.vehicle-header h2 {
+    font-size: 1.8rem;
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+}
+
+.vehicle-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 30px;
+}
+
+.detail-card {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid #3498db;
+}
+
+.detail-card h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+}
+
+.detail-card p {
+    font-size: 1.1rem;
+    color: #34495e;
+    line-height: 1.6;
+}
+
+footer {
+    background: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 20px;
+    font-size: 1rem;
+}
+
+footer a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .input-group {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .search-btn {
+        width: 100%;
+    }
+}
