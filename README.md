@@ -1,104 +1,89 @@
+# 🚗 Consulta FIPE — Preço Médio de Veículos
 
-# 🚗 Consulta de Veículos por Placa - BrasilAPI
-
-Este é um projeto **web responsivo** que permite consultar informações de veículos brasileiros a partir da placa, utilizando a **[BrasilAPI](https://brasilapi.com.br/)**, uma API pública e gratuita.
-
-A ferramenta permite visualizar informações como fabricante, modelo, ano, cor, combustível, categoria, cidade de registro e situação, além de dados da tabela FIPE.
+Aplicação web moderna para consultar o **preço médio de veículos** na Tabela FIPE.  
+O usuário pode selecionar o tipo de veículo (**carros, motos ou caminhões**), escolher a marca, modelo e consultar os detalhes completos, incluindo valor médio FIPE, combustível, ano do modelo e mês de referência.
 
 ---
 
-## 📸 **Preview do Sistema**
+## ✨ Funcionalidades
 
-![Consulta de Veículos](https://brasilapi.com.br/static/og-image.png) <!-- (Opcional: Trocar por uma imagem sua hospedada no GitHub, Imgur, etc.) -->
-
----
-
-## ✅ **Funcionalidades**
-
-* Consulta em tempo real pela BrasilAPI
-* Validação de placas nos formatos:
-
-  * Mercosul (ABC1D23)
-  * Antigo (ABC1234)
-* Exibição completa dos dados do veículo
-* Design moderno, responsivo e de fácil utilização
-* Exemplos de placas para testes rápidos
-* Tratamento elegante de erros e feedback visual
+- 🔍 Consulta em tempo real dos valores da Tabela FIPE  
+- 🚘 Suporte a **carros, motos e caminhões**  
+- 🏭 Seleção dinâmica de **marca** e **modelo**  
+- 📊 Exibição clara e organizada dos resultados:  
+  - Marca  
+  - Modelo  
+  - Ano  
+  - Combustível  
+  - Valor médio FIPE  
+  - Mês de referência  
+- ⚡ Interface rápida, intuitiva e responsiva  
 
 ---
 
-## ⚙️ **Tecnologias Utilizadas**
+## 🚀 Tecnologias Utilizadas
 
-* **HTML5**
-* **CSS3**
-* **JavaScript (ES6+)**
-* **[BrasilAPI](https://brasilapi.com.br/docs#tag/Placas)** (consulta de veículos)
-* **FontAwesome** (ícones)
+- **HTML5** → Estrutura semântica da aplicação  
+- **CSS3** → Estilização moderna e responsiva  
+- **JavaScript (ES6)** → Consumo da API e exibição dinâmica dos resultados  
+- **Font Awesome** → Ícones elegantes para melhor usabilidade  
+- **[BrasilAPI - FIPE](https://brasilapi.com.br/docs#tag/FIPE)** → Fonte oficial dos dados  
 
 ---
 
-## 🚀 **Como Executar o Projeto Localmente**
+## 📂 Estrutura do Projeto
+```
+├── index.html # Estrutura principal
+├── css/
+│ └── style.css # Estilos e layout responsivo
+├── js/
+│ └── consulta.js # Lógica de consulta à API e exibição dos dados
 
-### 1. Clone o repositório
-
-```bash
-git clone https://github.com/seu-usuario/consulta-veiculos-brasilapi.git
 ```
 
-### 2. Acesse a pasta do projeto
+---
+
+## ⚡ Como Usar Localmente
+
+1. Clone este repositório:
+   ```bash
+   git clone https://github.com/ReiBrito/Consulta-FIPE.git
+   ```
+Acesse a pasta do projeto:
 
 ```bash
-cd consulta-veiculos-brasilapi
+  cd Consulta-FIPE
 ```
+Abra o arquivo index.html no navegador:
 
-### 3. Abra o arquivo `index.html` no seu navegador
+```bash
+  start index.html   # Windows
+  open index.html    # Mac
+  xdg-open index.html # Linux
+```
+Escolha o tipo de veículo, selecione a marca, o modelo e clique em Consultar para visualizar os detalhes.
 
-* **No Windows**: dê dois cliques no `index.html`
-* **Ou execute com um servidor local (opcional, recomendado):**
+## 🌐 Demonstração
 
-  ```bash
-  # Com Python 3 instalado
-  python -m http.server 8080
-  ```
+O GitHub Pages irá gerar o link:
 
-  Depois acesse: [http://localhost:8080](http://localhost:8080)
+👉 https://ReiBrito.github.io/consulta-veiculos-brasilapi/
 
----
+## 🖼️ Imagem
 
-## 🔑 **Exemplos de Placas para Teste**
+![Tela](print.png)
 
-| Placa   | Formato  |
-| ------- | -------- |
-| ABC1D23 | Mercosul |
-| ABC1234 | Antigo   |
-| BRA2S19 | Brasil   |
+## 📌 Melhorias Futuras
 
-⚠️ Os dados exibidos podem ser limitados por questões de privacidade da API.
+📱 Versão PWA para uso offline
 
----
+📝 Histórico de consultas salvas no navegador
 
-## 🛡️ **Licença**
+📤 Exportar os resultados em PDF ou Excel
 
-Este projeto está licenciado sob a licença MIT.
-Sinta-se livre para usá-lo e adaptá-lo nos seus próprios projetos.
+📊 Comparação de valores entre diferentes modelos
 
----
+## 👨‍💻 Autor
 
-## 🙋‍♂️ **Autor**
-
-Desenvolvido por **[Seu Nome](https://github.com/seu-usuario)** — Maranhão, Brasil 🇧🇷
-
----
-
-## 🔗 **Links Úteis**
-
-* [BrasilAPI - Site Oficial](https://brasilapi.com.br)
-* [Documentação BrasilAPI - Placas](https://brasilapi.com.br/docs#tag/Placas)
-* [MDN JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
-* [FontAwesome](https://fontawesome.com/)
-
----
-
-### ✔️ Sugestão: hospede este projeto no GitHub Pages, Netlify ou Vercel para compartilhar com outras pessoas.
-
----
+Desenvolvido por Reinaldo Brito 💙
+Sinta-se livre para contribuir, sugerir melhorias ou adaptar ao seu uso!
